@@ -1,32 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import {CadastrarPjComponent, CadastroPjComponent} from './components';
-import {RouterModule} from '@angular/router';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { SharedModule } from '../../shared/shared.module';
-import { CadastrarPjService } from './services';
 
+import { CadastrarPfComponent, CadastroPfComponent } from './components';
+import { SharedModule } from '../../shared/shared.module';
+import { CadastrarPfService } from './services/cadastrar-pf.service';
 import {
   MatInputModule,
   MatButtonModule,
   MatListModule,
   MatTooltipModule,
   MatIconModule,
-  MatSnackBarModule
-} from '@angular/material';
+  MatSnackBarModule } from '@angular/material';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    FlexLayoutModule,
-    RouterModule,
     HttpClientModule,
+    RouterModule,
     MatInputModule,
     MatButtonModule,
     MatListModule,
@@ -36,11 +33,11 @@ import {
     SharedModule
   ],
   declarations: [
-    CadastroPjComponent,
-    CadastrarPjComponent
+    CadastrarPfComponent,
+    CadastroPfComponent
   ],
   providers: [
-    CadastrarPjService
+    CadastrarPfService
   ]
 })
-export class  CadastroPjModule {}
+export class CadastroPfModule { }
